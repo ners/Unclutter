@@ -1,0 +1,40 @@
+name:                Unclutter
+version:             0.1.0.0
+github:              "ners/Unclutter"
+license:             Apache-2.0
+author:              "ners"
+maintainer:          "ners@gmx.ch"
+copyright:           "(c) ners 2020"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+synopsis:            Finds duplicated files and directories, then clones them
+category:            Utilities
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/ners/Unclutter#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- Cabal
+- containers
+- exceptions
+- path >= 0.8.0
+- path-io
+- text
+- extra
+
+executables:
+  Unclutter-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -O2
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
